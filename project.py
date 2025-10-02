@@ -52,6 +52,7 @@ def seirModel(populationSize, initialInfected, initialRecovered, transmissionRat
     
 #Inputs from the user
 print("Covid-19 Model")
+print("Press enter to input 'e.g' values")
 pop = int(input("Enter population size (e.g. 1,000,000): ")or 1000000)
 inf = int(input("Enter People infected(e.g. 10): ")or 10)
 rec = int(input("Enter number of people already recovered (e.g. 0): ")or 0)
@@ -80,7 +81,8 @@ plt.legend()
 plt.grid()
 
 #This part ensures the y axis labels are whole numbers and include commas
-plt.ticklabel_format(style='plain', axis='y')
 plt.gca().yaxis.set_major_formatter(FuncFormatter(lambda x, _: f'{int(x):,}'))
 
 plt.show()
+
+#67
