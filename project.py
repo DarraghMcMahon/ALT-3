@@ -51,7 +51,7 @@ def seirModel(populationSize, initialInfected, initialRecovered, transmissionRat
     return listS, listE, listI, listR
     
 #Inputs from the user
-print("Covid-19 Model")
+print("Virus SEIR Model")
 print("Press enter to input 'e.g' values")
 pop = int(input("Enter population size (e.g. 1,000,000): ")or 1000000)
 inf = int(input("Enter People infected(e.g. 10): ")or 10)
@@ -76,7 +76,7 @@ plt.plot(days, R, label="Recovered")
 #Labels/Formating
 plt.xlabel("Days")
 plt.ylabel("Number of People")
-plt.title("COVID-19 SEIR Model")
+plt.title("Virus SEIR Model")
 plt.legend()
 plt.grid()
 
