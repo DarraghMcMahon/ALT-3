@@ -1,4 +1,4 @@
-#Import the librarys needed
+au#Import the librarys needed
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.ticker import FuncFormatter
@@ -52,15 +52,15 @@ def seirModel(populationSize, initialInfected, initialRecovered, transmissionRat
     
 #Inputs from the user
 print("Virus SEIR Model")
-print("Press enter to input 'e.g' values")
-pop = int(input("Enter population size (e.g. 1,000,000): ")or 1000000)
-inf = int(input("Enter People infected(e.g. 10): ")or 10)
-rec = int(input("Enter number of people already recovered (e.g. 0): ")or 0)
-tra = float(input("Enter transmission rate (e.g. 0.3): ")or 0.3)
-con = float(input("Enter contact rate per person (e.g. 10): ")or 10)
-infp = float(input("Enter infectious period in days (e.g. 14): ")or 14)
-inc = float(input("Enter incubation period in days (e.g. 5): ")or 5)
-days = int(input("Enter number of days to simulate (e.g. 160): ")or 160)
+print("Press enter to input default values")
+pop = int(input("Enter population size (default: 1,000,000): ")or 1000000)
+inf = int(input("Enter People infected(default: 10): ")or 10)
+rec = int(input("Enter number of people already recovered (default: 0): ")or 0)
+tra = float(input("Enter transmission rate (default: 0.3): ")or 0.3)
+con = float(input("Enter contact rate per person (default: 10): ")or 10)
+infp = float(input("Enter infectious period in days (default: 14): ")or 14)
+inc = float(input("Enter incubation period in days (default: 5): ")or 5)
+days = int(input("Enter number of days to simulate (default: 160): ")or 160)
 
 #Run the seirModel function
 S, E, I, R = seirModel(pop, inf, rec, tra, con, infp, inc, days)
